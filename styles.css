@@ -14,6 +14,10 @@
   display: none;
 }
 
+.carousel-img {
+  display: block;
+  width: 50px;
+}
 .prev,
 .next {
   position: absolute;
