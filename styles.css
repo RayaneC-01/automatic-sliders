@@ -1,40 +1,82 @@
 .carousel {
   position: relative;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .carousel-inner {
   display: flex;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
   width: 100%;
   display: none;
+  border-radius: 10px;
 }
 
 .carousel-img {
   display: block;
-  width: 50px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
-.prev,
-.next {
+
+.carousel-control-prev,
+.carousel-control-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
   border: none;
   cursor: pointer;
-  padding: 10px;
-  z-index: 1;
+  padding: 15px 10px; /* Ajustez le rembourrage selon vos préférences */
+  width: auto;
+  height: auto;
+  border-radius: 5px; /* Ajoutez une légère courbure aux coins */
+  transition: background-color 0.5s ease;
 }
 
-.prev {
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-indicators button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators button:hover,
+.carousel-indicators button.active {
+  background-color: #2d4dec;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
   left: 0;
-}
-
-.next {
-  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
